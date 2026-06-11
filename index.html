@@ -140,6 +140,63 @@
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #00246B; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #001540; }
+
+        /* --- Animations for Vision 04 Users --- */
+        @keyframes strictWalk {
+            0%, 100% { transform: translateX(-80px); }
+            50% { transform: translateX(80px); }
+        }
+        @keyframes wanderGreen {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(60px, 25px); }
+            66% { transform: translate(-20px, 15px); }
+        }
+        @keyframes wanderBlue {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-50px, -40px); }
+            66% { transform: translate(30px, -20px); }
+        }
+        @keyframes wanderPurple {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-40px, 30px); }
+            66% { transform: translate(-80px, 10px); }
+        }
+        .animate-strict-walk { animation: strictWalk 4s linear infinite; }
+        .animate-wander-green { animation: wanderGreen 7s ease-in-out infinite; }
+        .animate-wander-blue { animation: wanderBlue 9s ease-in-out infinite; }
+        .animate-wander-purple { animation: wanderPurple 8s ease-in-out infinite; }
+
+        /* --- Animations for AI Agent Workflow --- */
+        @keyframes float-file {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes flow-arrow {
+            0%, 100% { transform: translateX(-3px); opacity: 0.7; }
+            50% { transform: translateX(3px); opacity: 1; }
+        }
+        .animate-float-1 { animation: float-file 3s ease-in-out infinite; }
+        .animate-float-2 { animation: float-file 3.5s ease-in-out infinite; animation-delay: 0.5s; }
+        .animate-float-3 { animation: float-file 4s ease-in-out infinite; animation-delay: 1s; }
+        .animate-flow { animation: flow-arrow 2s ease-in-out infinite; }
+
+        /* --- Animations for Vision 02 (Guillotine Process) --- */
+        @keyframes gear-spin {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes slide-right {
+            0% { transform: translateX(-5px); opacity: 0.4; }
+            50% { transform: translateX(5px); opacity: 1; }
+            100% { transform: translateX(-5px); opacity: 0.4; }
+        }
+        @keyframes pop-up-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        .animate-gear-spin { animation: gear-spin 4s linear infinite; }
+        .animate-slide-right { animation: slide-right 1.5s ease-in-out infinite; }
+        .animate-pop-up { animation: pop-up-subtle 2.5s ease-in-out infinite; }
+
     </style>
 </head>
 <body class="antialiased selection:bg-mahidol-gold selection:text-mahidol-dark">
@@ -164,7 +221,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <a href="https://www.natthakit.me/" class="block px-4 py-2 text-gray-700 hover:bg-mahidol-light">Blog</a>
             <a href="#vision1" class="block px-4 py-2 text-gray-700 hover:bg-mahidol-light">ผลักดันกลยุทธ์</a>
@@ -199,12 +255,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 reveal">
                 <span class="text-mahidol-gold font-bold tracking-wider uppercase text-sm">Vision 01</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-mahidol-blue mt-2 mb-4">การช่วยผลักดันกลยุทธ์มหาวิทยาลัย</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-mahidol-blue mt-2 mb-4">ช่วยผลักดันกลยุทธ์มหาวิทยาลัย</h2>
                 <div class="w-24 h-1 bg-mahidol-gold mx-auto rounded-full mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-10xl mx-auto">
                     <strong>"Mahidol University for Real World Impact"</strong><br>
                     ขับเคลื่อนมหาวิทยาลัยสู่การเป็นมหาวิทยาลัยชั้นนำด้านการวิจัยและสร้างการเปลี่ยนแปลงด้านวิทยาศาสตร์สุขภาพและสุขภาวะองค์รวมระดับโลกอย่างแท้จริง<br><br><br>
-                   
+                    
                     เปรียบมหาวิทยาลัยเป็น <span class="text-mahidol-blue font-bold">รถบรรทุก</span> ที่กำลังมุ่งสู่เป้าหมาย <br> กองกฎหมายคือกลไกที่ทำให้รถคันนี้เดินทางถึงที่หมายอย่างปลอดภัย
                 </p>
             </div>
@@ -216,10 +272,8 @@
                 </div>
             </div>
 
-            <!-- Truck Metaphor Interactivity -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 reveal">
                 
-                <!-- Card 1 -->
                 <div class="flip-card cursor-pointer">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -240,7 +294,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="flip-card cursor-pointer">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -261,7 +314,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="flip-card cursor-pointer">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -282,7 +334,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="flip-card cursor-pointer">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -304,7 +355,6 @@
                 </div>
             </div>
 
-            <!-- Mindset Shift -->
             <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 reveal">
                 <h3 class="text-2xl font-bold text-center text-mahidol-blue mb-6">บทบาทกองกฎหมาย</h3>
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -338,28 +388,46 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-mahidol-blue mt-2 mb-4">Regulatory Guillotine</h2>
                     <p class="text-gray-600 mb-6">
                         ทำกฎระเบียบของมหาวิทยาลัยให้ทันสมัย มีประสิทธิภาพ <br>
-                        ใช้ 5Cs ของ Scott Jacobs <br>
-                        ใช้การประเมินผลสัมฤทธิ์ของกฎหมาย <br>
+                        ใช้หลัก 5Cs ของ Scott Jacobs และการประเมินผลสัมฤทธิ์ของกฎหมาย <br>
                         (พ.ร.บ.หลักเกณฑ์การจัดทำร่างกฎหมายและการประเมินผลสัมฤทธิ์ของกฎหมาย 2562)
                     </p>
                     
                     
 
-                    <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-md flex items-center justify-between text-center mb-8 lg:mb-0">
-                        <div class="w-1/4">
-                            <div class="w-12 h-12 bg-blue-50 text-mahidol-blue rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-100"><i class="fas fa-inbox text-xl"></i></div>
-                            <span class="text-xs font-bold text-gray-700">Input</span>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] flex items-center justify-between text-center mb-8 lg:mb-0 relative overflow-hidden group transition-shadow hover:shadow-lg">
+                        
+                        <div class="w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-blue-50 text-mahidol-blue rounded-full flex items-center justify-center mb-3 border-2 border-blue-100 shadow-inner group-hover:-translate-y-1 transition-transform">
+                                <i class="fas fa-inbox text-2xl animate-bounce" style="animation-duration: 3s;"></i>
+                            </div>
+                            <span class="text-sm font-bold text-gray-700">Input</span>
                         </div>
-                        <div class="w-1/8 text-mahidol-gold animate-pulse"><i class="fas fa-chevron-right text-xl"></i></div>
-                        <div class="w-1/4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-mahidol-blue to-blue-900 text-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg transform hover:rotate-180 transition-transform duration-500"><i class="fas fa-cogs text-2xl"></i></div>
-                            <span class="text-xs font-bold text-mahidol-blue">Process (5Cs)</span>
+
+                        <div class="w-1/8 flex justify-center text-mahidol-gold animate-slide-right">
+                            <i class="fas fa-chevron-right text-2xl drop-shadow-sm"></i>
+                            <i class="fas fa-chevron-right text-2xl drop-shadow-sm -ml-2 opacity-60"></i>
                         </div>
-                        <div class="w-1/8 text-mahidol-gold animate-pulse"><i class="fas fa-chevron-right text-xl"></i></div>
-                        <div class="w-1/4">
-                            <div class="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto mb-2 border border-green-100"><i class="fas fa-file-signature text-xl"></i></div>
-                            <span class="text-xs font-bold text-gray-700">Output</span>
+
+                        <div class="w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="absolute top-0 w-16 h-16 bg-blue-400/30 rounded-full blur-md animate-pulse"></div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-mahidol-blue to-blue-900 text-white rounded-full flex items-center justify-center mb-3 shadow-[0_0_15px_rgba(0,36,107,0.5)] relative border-2 border-white z-10">
+                                <i class="fas fa-cogs text-3xl animate-gear-spin"></i>
+                            </div>
+                            <span class="text-sm font-bold text-mahidol-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-100 whitespace-nowrap">Process (5Cs)</span>
                         </div>
+
+                        <div class="w-1/8 flex justify-center text-mahidol-gold animate-slide-right" style="animation-delay: 0.75s;">
+                            <i class="fas fa-chevron-right text-2xl drop-shadow-sm"></i>
+                            <i class="fas fa-chevron-right text-2xl drop-shadow-sm -ml-2 opacity-60"></i>
+                        </div>
+
+                        <div class="w-1/4 relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-green-50 text-green-600 rounded-full flex items-center justify-center mb-3 border-2 border-green-100 shadow-inner animate-pop-up group-hover:-translate-y-1 transition-transform">
+                                <i class="fas fa-file-signature text-2xl"></i>
+                            </div>
+                            <span class="text-sm font-bold text-gray-700">Output</span>
+                        </div>
+                        
                     </div>
                     <div class="bg-mahidol-light p-6 rounded-xl border-l-4 border-mahidol-blue mb-8">
                         <h4 class="font-bold text-mahidol-blue mb-2">กระบวนการกิโยติน</h4>
@@ -371,7 +439,6 @@
                     </div>
                 </div>
 
-                <!-- 5C Interactive Tabs -->
                 <div class="lg:w-1/2 w-full reveal">
                     <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                         <div class="flex flex-wrap border-b">
@@ -417,7 +484,6 @@
     </section>
 
     <section id="vision3" class="py-20 bg-mahidol-dark text-white relative overflow-hidden">
-        <!-- Abstract Tech Background -->
         <div class="absolute inset-0 opacity-10">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="90%" cy="10%" r="20%" fill="none" stroke="#F2A900" stroke-width="2" stroke-dasharray="10 10"/>
@@ -432,14 +498,13 @@
                 <div class="w-24 h-1 bg-mahidol-gold mx-auto rounded-full mb-6"></div>
                 <p class="text-lg text-gray-300 max-w-3xl mx-auto">
                     ใช้ AI เป็นเครื่องมือเพิ่มมูลค่าให้งานกฎหมาย <br>
-                    (วิเคราะห์ สังเคราะห์ สรุปผลเป็น Interactive Information) 
+                    วิเคราะห์ สังเคราะห์ สรุปผล และสร้าง Interactive Information
                 </p>
             </div>
 
             
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 reveal">
-                <!-- Prompt Library -->
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all group">
                     <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center text-green-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-terminal"></i>
@@ -452,7 +517,6 @@
                 
                
 
-                <!-- LLM Wiki -->
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all group">
                     <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-network-wired"></i>
@@ -463,7 +527,6 @@
                     </p>
                 </div>
 
-                 <!-- AI Agent -->
                  <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all group">
                     <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-robot"></i>
@@ -476,62 +539,89 @@
 
                 
             </div>
-            <div class="mb-16 reveal max-w-4xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-white/10 shadow-2xl">
+            <div class="mb-16 reveal max-w-5xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl p-6 md:p-10 border border-white/10 shadow-2xl">
                 <h3 class="text-center text-mahidol-gold font-bold mb-8 text-xl">ตัวอย่าง AI Agent Workflow สำหรับงานกฎหมาย</h3>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
-                    <!-- Input -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                    
                     <div class="flex flex-col items-center w-full md:w-auto">
-                        <div class="w-20 h-20 bg-green-900/40 rounded-2xl flex items-center justify-center border border-green-500/40 text-green-400 text-4xl shadow-[0_0_20px_rgba(34,197,94,0.15)] hover:bg-green-800/50 transition-colors">
-                            <i class="fas fa-file-excel"></i>
+                        <div class="relative w-24 h-24 flex items-center justify-center mb-4 mt-2">
+                            <div class="absolute w-12 h-12 bg-blue-900/60 rounded-xl flex items-center justify-center border border-blue-500/40 text-blue-400 text-xl shadow-lg -translate-x-6 -translate-y-4 animate-float-1">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="absolute w-12 h-12 bg-red-900/60 rounded-xl flex items-center justify-center border border-red-500/40 text-red-400 text-xl shadow-lg translate-x-6 -translate-y-2 animate-float-2">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="absolute w-16 h-16 bg-green-900/80 rounded-xl flex items-center justify-center border border-green-500/60 text-green-400 text-3xl shadow-[0_0_20px_rgba(34,197,94,0.2)] z-10 translate-y-3 animate-float-3">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
                         </div>
-                        <span class="mt-4 text-sm font-semibold text-gray-300">รับข้อมูล Excel</span>
+                        <span class="mt-2 text-sm font-semibold text-gray-300 text-center">รับข้อมูลหลายรูปแบบ<br><span class="text-xs text-gray-500 font-normal">(Excel, Word, PDF ฯลฯ)</span></span>
                     </div>
                     
-                    <!-- Arrow -->
-                    <div class="hidden md:flex flex-col items-center text-gray-500">
-                        <i class="fas fa-long-arrow-alt-right text-3xl text-white/30"></i>
-                        <span class="text-xs mt-1 text-mahidol-gold bg-mahidol-gold/10 px-2 py-1 rounded-full">Trigger / Cron</span>
+                    <div class="hidden md:flex flex-col items-center text-gray-500 animate-flow">
+                        <i class="fas fa-long-arrow-alt-right text-3xl text-white/40"></i>
+                        <span class="text-xs mt-1 text-mahidol-gold bg-mahidol-gold/10 px-2 py-1 rounded-full whitespace-nowrap">Trigger / Cron</span>
                     </div>
-                    <div class="md:hidden text-gray-500 my-2"><i class="fas fa-long-arrow-alt-down text-2xl text-white/30"></i></div>
+                    <div class="md:hidden text-gray-500 my-2 animate-flow"><i class="fas fa-long-arrow-alt-down text-2xl text-white/40"></i></div>
 
-                    <!-- AI Agent Process -->
                     <div class="flex flex-col items-center relative w-full md:w-auto">
-                        <div class="absolute -inset-6 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-                        <div class="w-28 h-28 bg-gradient-to-br from-mahidol-blue to-blue-800 rounded-full flex flex-col items-center justify-center border-2 border-mahidol-gold text-white shadow-[0_0_40px_rgba(0,36,107,0.8)] relative z-10 hover:scale-105 transition-transform">
-                            <i class="fas fa-robot text-4xl mb-2"></i>
-                            <span class="text-sm font-bold">AI Agent</span>
+                        <div class="absolute -inset-8 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+                        
+                        <div class="w-32 h-32 relative flex items-center justify-center group cursor-default">
+                            <div class="absolute inset-0 border-2 border-dashed border-mahidol-gold/70 rounded-full animate-[spin_8s_linear_infinite]"></div>
+                            <div class="w-24 h-24 bg-gradient-to-br from-mahidol-blue to-blue-800 rounded-full flex flex-col items-center justify-center border border-blue-400/30 text-white shadow-[0_0_40px_rgba(0,36,107,0.8)] relative z-10 group-hover:scale-105 transition-transform duration-300">
+                                <i class="fas fa-robot text-3xl mb-1 text-blue-200"></i>
+                                <span class="text-xs font-bold">AI Agent</span>
+                            </div>
                         </div>
+                        
                         <span class="mt-5 text-sm font-medium text-blue-300 text-center">ประมวลผลอัตโนมัติ<br>(LLM / Knowledge Base)</span>
                     </div>
 
-                    <!-- Arrow -->
-                    <div class="hidden md:flex flex-col items-center text-gray-500">
-                        <i class="fas fa-long-arrow-alt-right text-3xl text-white/30"></i>
-                        <span class="text-xs mt-1 text-mahidol-gold bg-mahidol-gold/10 px-2 py-1 rounded-full">Output</span>
+                    <div class="hidden md:flex flex-col items-center text-gray-500 animate-flow" style="animation-delay: 1s;">
+                        <i class="fas fa-long-arrow-alt-right text-3xl text-white/40"></i>
+                        <span class="text-xs mt-1 text-mahidol-gold bg-mahidol-gold/10 px-2 py-1 rounded-full whitespace-nowrap">Action</span>
                     </div>
-                    <div class="md:hidden text-gray-500 my-2"><i class="fas fa-long-arrow-alt-down text-2xl text-white/30"></i></div>
+                    <div class="md:hidden text-gray-500 my-2 animate-flow"><i class="fas fa-long-arrow-alt-down text-2xl text-white/40"></i></div>
 
-                    <!-- Output -->
-                    <div class="flex flex-col gap-4 w-full md:w-auto">
-                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
+                    <div class="flex flex-col gap-3 w-full md:w-auto">
+                        
+                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-orange-500/10 hover:border-orange-500/40 transition-all transform hover:translate-x-2 cursor-default">
                             <div class="text-orange-400 text-2xl w-8 text-center"><i class="fas fa-file-powerpoint"></i></div>
                             <div class="flex flex-col">
                                 <span class="text-sm font-bold text-white">สร้าง Presentation</span>
                                 <span class="text-xs text-gray-400">สรุปข้อมูลเป็นสไลด์</span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-white/20 transition-colors">
-                            <div class="text-blue-400 text-2xl w-8 text-center"><i class="fas fa-paper-plane"></i></div>
+
+                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-blue-500/10 hover:border-blue-500/40 transition-all transform hover:translate-x-2 cursor-default">
+                            <div class="text-blue-400 text-2xl w-8 text-center"><i class="fas fa-file-signature"></i></div>
                             <div class="flex flex-col">
-                                <span class="text-sm font-bold text-white">ส่งอีเมลแจ้งเตือน</span>
-                                <span class="text-xs text-gray-400">ผู้ที่เกี่ยวข้องอัตโนมัติ</span>
+                                <span class="text-sm font-bold text-white">ร่างสัญญา/เอกสาร</span>
+                                <span class="text-xs text-gray-400">สร้างฟอร์มตาม Template</span>
                             </div>
                         </div>
+
+                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-purple-500/10 hover:border-purple-500/40 transition-all transform hover:translate-x-2 cursor-default">
+                            <div class="text-purple-400 text-2xl w-8 text-center"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="flex flex-col">
+                                <span class="text-sm font-bold text-white">ส่งอีเมลแจ้งเตือน</span>
+                                <span class="text-xs text-gray-400">ส่งถึงผู้บริหาร/ผู้เกี่ยวข้อง</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white/10 px-5 py-3 rounded-xl border border-white/20 hover:bg-[#00B900]/10 hover:border-[#00B900]/50 transition-all transform hover:translate-x-2 cursor-default">
+                            <div class="text-[#00B900] text-2xl w-8 text-center"><i class="fab fa-line"></i></div>
+                            <div class="flex flex-col">
+                                <span class="text-sm font-bold text-white">แจ้งเตือนผ่าน LINE</span>
+                                <span class="text-xs text-gray-400">ส่งเข้ากลุ่มแบบ Real-time</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Human in the Loop -->
             <div class="bg-gradient-to-r from-mahidol-blue to-blue-900 rounded-2xl p-6 border border-mahidol-gold/50 flex flex-col md:flex-row items-center justify-between reveal shadow-2xl">
                 <div class="flex items-center mb-4 md:mb-0">
                     <div class="w-12 h-12 bg-mahidol-gold rounded-full flex items-center justify-center text-mahidol-dark text-xl font-bold mr-4">
@@ -563,63 +653,57 @@
                 </p>
             </div>
 
-            <!-- Concept Cards -->
             <div class="grid md:grid-cols-2 gap-8 mb-12 reveal">
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-red-500">
                     <h3 class="text-2xl font-bold mb-2 flex items-center"><span class="text-red-500 mr-2 text-3xl">L</span>ean <span class="text-sm font-normal text-gray-500 ml-3">(กำจัดความสูญเปล่า)</span></h3>
-                    <p class="text-gray-600">ตัดทอนขั้นตอนที่ไม่จำเป็น งานซ้ำซ้อน งานล่าช้า เพื่อสร้างกระบวนการที่ไหลลื่น (Flow) และเพิ่มคุณค่าให้ผู้รับบริการสูงสุด</p>
+                    <p class="text-gray-600">"ลดความสูญเปล่า (Waste)" และ "เพิ่มคุณค่า (Value)" <br>
+                        กำหนดคุณค่าที่ต้องการ แจกแจงขั้นตอนทั้งหมด สร้างการไหลลื่นของงาน กำจัดอุปสรรคที่ทำให้งานสะดุด และนำข้อผิดพลาดมาถอดบทเรียน
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500">
                     <h3 class="text-2xl font-bold mb-2 flex items-center"><span class="text-blue-500 mr-2 text-3xl">A</span>gile <span class="text-sm font-normal text-gray-500 ml-3">(ยืดหยุ่น รวดเร็ว)</span></h3>
-                    <p class="text-gray-600">แบ่งงานชิ้นใหญ่ออกเป็นส่วนย่อยๆ แล้วทยอยทำทีละส่วนให้เสร็จสมบูรณ์ทีละชิ้น เมื่อนำมารวมกันจะได้เป็นชิ้นงานที่สมบูรณ์ (Incremental) เพื่อส่งมอบงานได้อย่างรวดเร็ว ปรับเปลี่ยนแผนได้ตามสถานการณ์ ให้ความสำคัญกับผลลัพธ์และคนมากกว่ากระบวนการ</p>
+                    <p class="text-gray-600">Agile lawmaking (or agile legislation) "building laws like software" แทนที่จะร่างกฎหมายฉบับครอบจักรวาลในทีเดียว ให้ซอยเป็นกฎหมายลูก/มาตราเฉพาะเรื่องที่ใช้งานได้จริง แล้วทยอยประกาศใช้ทีละส่วน (Increment) เพื่อแก้ปัญหาได้ทันท่วงที ปรับเปลี่ยนได้ตามสถานการณ์ ให้ความสำคัญกับผลลัพธ์และคนมากกว่ากระบวนการ</p>
                 </div>
             </div>
 
-            <!-- Road Metaphor Comparison -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden reveal border border-gray-100">
                 <div class="bg-mahidol-blue text-white p-6 text-center">
-                    <h3 class="text-xl font-bold">การออกแบบระบบกฎหมาย (Governance Design)</h3>
+                    <h3 class="text-xl font-bold">การออกแบบระบบกฎหมาย </h3>
                 </div>
                 <div class="flex flex-col md:flex-row">
-                    <!-- Old System -->
                     <div class="md:w-1/2 p-8 border-b md:border-b-0 md:border-r border-gray-200 bg-red-50/30">
                         <div class="text-center mb-6">
                             <span class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-bold mb-2">ระบบราชการเดิม</span>
                             <h4 class="font-bold text-lg text-gray-800">"ขีดเส้นให้เดิน"</h4>
                         </div>
                         <div class="relative h-32 flex items-center justify-center mb-4">
-                            <!-- Visual representation of a single thin line -->
                             <div class="w-full h-1 bg-red-400 absolute"></div>
-                            <div class="w-8 h-8 bg-red-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg relative"><i class="fas fa-user"></i></div>
+                            <div class="w-8 h-8 bg-red-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg relative animate-strict-walk"><i class="fas fa-user"></i></div>
                         </div>
                         <p class="text-sm text-gray-600 text-center">ต้องทำตามกฎระเบียบทุกขั้นตอนอย่างเคร่งครัด เดินออกนอกเส้นไม่ได้ ขาดความยืดหยุ่น ล่าช้า</p>
                     </div>
                     
-                    <!-- New System -->
                     <div class="md:w-1/2 p-8 bg-green-50/30 relative overflow-hidden">
                         <div class="text-center mb-6">
                             <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-2">แนวคิดใหม่</span>
                             <h4 class="font-bold text-lg text-gray-800">"สร้างถนนให้กว้าง"</h4>
                         </div>
                         <div class="relative h-32 flex items-center justify-center mb-4 bg-gray-200 rounded-lg overflow-hidden border-2 border-dashed border-gray-400">
-                            <!-- Visual representation of a broad road with lanes -->
                             <div class="w-full h-full absolute flex flex-col justify-evenly">
                                 <div class="w-full h-1 border-b-2 border-dashed border-white opacity-50"></div>
                                 <div class="w-full h-1 border-b-2 border-dashed border-white opacity-50"></div>
                             </div>
-                            <!-- Users navigating freely -->
-                            <div class="w-8 h-8 bg-green-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute top-4 left-1/4 animate-[pulse_2s_ease-in-out_infinite]"><i class="fas fa-user"></i></div>
-                            <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute bottom-4 left-1/2"><i class="fas fa-user"></i></div>
-                            <div class="w-8 h-8 bg-purple-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute top-10 right-1/4"><i class="fas fa-user"></i></div>
+                            <div class="w-8 h-8 bg-green-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute top-4 left-1/4 animate-wander-green"><i class="fas fa-user"></i></div>
+                            <div class="w-8 h-8 bg-blue-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute bottom-4 left-1/2 animate-wander-blue"><i class="fas fa-user"></i></div>
+                            <div class="w-8 h-8 bg-purple-600 rounded-full z-10 flex items-center justify-center text-white shadow-lg absolute top-10 right-1/4 animate-wander-purple"><i class="fas fa-user"></i></div>
                             
-                            <!-- Red boundary indicators -->
                             <div class="absolute top-0 w-full h-2 bg-red-500/50"></div>
                             <div class="absolute bottom-0 w-full h-2 bg-red-500/50"></div>
                         </div>
                         <p class="text-sm text-gray-600 text-center">
                             <strong>กำหนดเพียงข้อห้ามที่จำเป็น</strong> <br>
-                            ผู้ปฏิบัติงานสามารถเลือกเลนเดินทาง/วิธีการได้อิสระ <br>(ทำอะไรก็ได้ แต่อย่าฝ่าฝืนข้อห้าม)<br>
-                             และเน้นผลลัพธ์
+                            ผู้ปฏิบัติงานสามารถเลือกเลนเดินทาง/วิธีการได้อิสระ <br>
+                            เน้นผลลัพธ์มากกว่าวิธีการ แต่ต้องไม่ฝ่าฝืนกฎหมายและจริยธรรม <br>
+                             
                         </p>
                     </div>
                 </div>
